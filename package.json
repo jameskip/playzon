@@ -6,7 +6,9 @@
   "devDependencies": {
     "@playwright/test": "^1.33.0"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

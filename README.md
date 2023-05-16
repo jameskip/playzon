@@ -1,4 +1,5 @@
 [![Playwright Tests](https://github.com/jameskip/playzon/actions/workflows/main.yml/badge.svg)](https://github.com/jameskip/playzon/actions/workflows/main.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/jameskip/playzon/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/jameskip/playzon/tree/main)
 
 # playzon
 
@@ -17,8 +18,8 @@ Select one _specific_ product on <https://amazon.com> and:
 
 - [x] verify product(s) can be added to cart
 - [x] search by product name/text and verify the expected product is found
-- [ ] search by product id (ASIN) and verify the expected product is found
-- [ ] stretch goal: time permitting, whatever test you think appropriate/important
+- [x] search by product id (ASIN) and verify the expected product is found
+- [x] stretch goal: time permitting, whatever test you think appropriate/important
 
 ## Install
 

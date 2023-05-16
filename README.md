@@ -20,6 +20,8 @@ Select one _specific_ product on <https://amazon.com> and:
 - [x] search by product name/text and verify the expected product is found
 - [x] search by product id (ASIN) and verify the expected product is found
 - [x] stretch goal: time permitting, whatever test you think appropriate/important
+  - [x] Add snapshot testing to verify the product page looks as expected
+  - [ ] Add cookies to standardize login flow and other settings
 
 ## Install
 

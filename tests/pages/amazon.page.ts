@@ -40,6 +40,8 @@ export class AmazonPage {
   async compareSnapshot(fileName: string) {
     const maskLocator = this.page.locator(".a-begin").first(); // Mask elements that are subject to change
 
+    await this.page.waitForLoadState("load");
+
     expect(await this.page.screenshot({ mask: [maskLocator] })).toMatchSnapshot(
       `amazon-${fileName}.png`
     );

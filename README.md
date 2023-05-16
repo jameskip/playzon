@@ -1,3 +1,5 @@
+[![Playwright Tests](https://github.com/jameskip/playzon/actions/workflows/main.yml/badge.svg)](https://github.com/jameskip/playzon/actions/workflows/main.yml)
+
 # playzon
 
 ## Install

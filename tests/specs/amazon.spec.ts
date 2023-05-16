@@ -2,19 +2,33 @@ import { test } from "@playwright/test";
 import { AmazonPage } from "../pages/amazon.page";
 
 const productDetails = {
-  searchTerm: "fish flip flops",
-  productTitle:
-    "Fish Flip Flops | The Original Fish Slippers | Funny Gift, Unisex Sandals, Bass Slides, Pool, Beach & Shower Shoes | Men, Women & Kids",
+  asin: "B076BT4HP9",
+  searchTerm: "zipchip",
+  productTitle: "ZipChip – The New Way to Play (Neon Yellow)",
 };
 
-test("search product", async ({ page }) => {
-  const amazon = new AmazonPage(page);
+test.describe("Amazon", async () => {
+  test("should retrieve product by text", async ({ page }) => {
+    const amazon = new AmazonPage(page);
 
-  await amazon.goto();
-  await amazon.searchProduct(productDetails.searchTerm);
-  await amazon.clickOnResult(productDetails.productTitle);
+    await amazon.goto();
+    await amazon.searchProduct(productDetails.searchTerm);
+    await amazon.clickOnResult(productDetails.productTitle);
 
-  await amazon.addToCart();
+    await amazon.addToCart();
 
-  await amazon.compareSnapshot("search-product");
+    await amazon.compareSnapshot("search-product");
+  });
+
+  test("should retrieve product by asin", async ({ page }) => {
+    const amazon = new AmazonPage(page);
+
+    await amazon.goto();
+    await amazon.searchProduct(productDetails.asin);
+    await amazon.clickOnResult(productDetails.productTitle);
+
+    await amazon.addToCart();
+
+    await amazon.compareSnapshot("search-asin");
+  });
 });

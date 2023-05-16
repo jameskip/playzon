@@ -22,6 +22,7 @@ Select one _specific_ product on <https://amazon.com> and:
 - [x] stretch goal: time permitting, whatever test you think appropriate/important
   - [x] Add snapshot testing to verify the product page looks as expected
   - [ ] Add cookies to standardize login flow and other settings
+  - [x] Run in Github Actions and CircleCI
 
 ## Install
 

@@ -43,7 +43,8 @@ export class AmazonPage {
     await this.page.waitForLoadState("load");
 
     expect(await this.page.screenshot({ mask: [maskLocator] })).toMatchSnapshot(
-      `amazon-${fileName}.png`
+      `amazon-${fileName}.png`,
+      { threshold: 0.2 }
     );
   }
 }

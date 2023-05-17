@@ -1,5 +1,11 @@
 import { expect, Locator, Page } from "@playwright/test";
 
+export interface IProductDetails {
+  asin: string;
+  searchTerm: string;
+  productTitle: string;
+}
+
 export class AmazonPage {
   readonly page: Page;
 
